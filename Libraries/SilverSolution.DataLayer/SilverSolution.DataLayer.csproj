@@ -40,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\EntityFramework\Repositories\ICategoryRepository.cs" />
+    <Compile Include="Abstract\EntityFramework\Repositories\ICustomerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SilverSolution.Core\SilverSolution.Core.csproj">
+      <Project>{0d22db8d-9a5f-40cc-86d0-4c3b96d195f4}</Project>
+      <Name>SilverSolution.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SilverSolution.Entities\SilverSolution.Entities.csproj">
+      <Project>{96b8cc65-f435-4c9f-8e72-e8dc337c7a60}</Project>
+      <Name>SilverSolution.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
