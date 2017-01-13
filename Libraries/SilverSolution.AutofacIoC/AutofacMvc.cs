@@ -1,10 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
-using SilverSolution.Business.Services.Abstract;
 using SilverSolution.Business.Services.Concrete;
 using SilverSolution.Core.DependencyResolve;
 using SilverSolution.EFCodeFirst.Repositories;
-using System;
 using System.Reflection;
 using System.Web.Mvc;
 

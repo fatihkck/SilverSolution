@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SilverSolution.AutofacIoC;
+using SilverSolution.Core.DependencyResolve;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +14,8 @@ namespace SilverSolution.WebApi
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            new DependencyResolve(new AutofacWebApi(typeof(WebApiApplication).Assembly, GlobalConfiguration.Configuration)).Bootstrap();
         }
     }
 }
