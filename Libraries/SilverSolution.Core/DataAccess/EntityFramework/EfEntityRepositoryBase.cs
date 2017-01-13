@@ -11,21 +11,21 @@ namespace SilverSolution.Core.DataAccess.EntityFramework
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {
-        public TEntity Get(Expression<Func<TEntity, bool>> filter)
+        public TEntity Get(Expression<Func<TEntity, bool>> predicate=null)
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter);
+                return context.Set<TEntity>().SingleOrDefault(predicate);
             }
         }
 
-        public List<TEntity> GetList(Expression<Func<TEntity, bool>> filter)
+        public List<TEntity> GetList(Expression<Func<TEntity, bool>> predicate=null)
         {
             using (var context = new TContext())
             {
-                return filter == null
+                return predicate == null
                     ? context.Set<TEntity>().ToList()
-                    : context.Set<TEntity>().Where(filter).ToList();
+                    : context.Set<TEntity>().Where(predicate).ToList();
             }
         }
 

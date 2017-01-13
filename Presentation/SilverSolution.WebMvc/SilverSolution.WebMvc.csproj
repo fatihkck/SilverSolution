@@ -44,6 +44,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.2.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Mvc5.4.0.0\lib\net451\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -123,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,11 +161,37 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\SilverSolution.AutofacIoC\SilverSolution.AutofacIoC.csproj">
+      <Project>{ff45ae49-762d-407b-8e9e-d128d59a26da}</Project>
+      <Name>SilverSolution.AutofacIoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\SilverSolution.Business\SilverSolution.Business.csproj">
+      <Project>{993f8c56-d3a7-47fc-bc81-a2f5fadc323c}</Project>
+      <Name>SilverSolution.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\SilverSolution.Core\SilverSolution.Core.csproj">
+      <Project>{0d22db8d-9a5f-40cc-86d0-4c3b96d195f4}</Project>
+      <Name>SilverSolution.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\SilverSolution.DataLayer\SilverSolution.DataLayer.csproj">
+      <Project>{d34f0224-57da-4e83-985d-7cec29e67699}</Project>
+      <Name>SilverSolution.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\SilverSolution.EFCodeFirst\SilverSolution.EFCodeFirst.csproj">
+      <Project>{5d4480a0-71ac-42f4-a846-5f9e26dcc1bc}</Project>
+      <Name>SilverSolution.EFCodeFirst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\SilverSolution.Entities\SilverSolution.Entities.csproj">
+      <Project>{96b8cc65-f435-4c9f-8e72-e8dc337c7a60}</Project>
+      <Name>SilverSolution.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
