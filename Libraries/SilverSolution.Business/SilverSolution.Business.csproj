@@ -56,10 +56,6 @@
       <Project>{d34f0224-57da-4e83-985d-7cec29e67699}</Project>
       <Name>SilverSolution.DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SilverSolution.EFCodeFirst\SilverSolution.EFCodeFirst.csproj">
-      <Project>{5D4480A0-71AC-42F4-A846-5F9E26DCC1BC}</Project>
-      <Name>SilverSolution.EFCodeFirst</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SilverSolution.Entities\SilverSolution.Entities.csproj">
       <Project>{96b8cc65-f435-4c9f-8e72-e8dc337c7a60}</Project>
       <Name>SilverSolution.Entities</Name>

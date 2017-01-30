@@ -1,16 +1,16 @@
 ﻿using SilverSolution.Business.Services.Abstract;
 using System.Collections.Generic;
 using SilverSolution.Entities.Concrete;
-using SilverSolution.EFCodeFirst.Repositories;
+using SilverSolution.DataLayer.Abstract.EntityFramework.Repositories;
 
 namespace SilverSolution.Business.Services.Concrete
 {
     public class CustomerService : ICustomerService
     {
 
-        private CustomerRepository _customerRepository;
+        private ICustomerRepository _customerRepository;
 
-        public CustomerService(CustomerRepository customerRepository)
+        public CustomerService(ICustomerRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }
